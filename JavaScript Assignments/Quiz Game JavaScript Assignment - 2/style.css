@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gentium Plus", serif;
+  font-weight: 600;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: rgb(15, 14, 14); */
+  background: linear-gradient(135deg, #000000, #595555, #333333);
+  background-attachment: fixed;
+}
+
+#quiz-game {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+select {
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1.5px;
+  background-color: rgb(49, 48, 48);
+  color: white;
+  backdrop-filter: blur(2rem);
+  border: 1px solid lightgray;
+  height: 2.2rem;
+  box-shadow: 2px 2px 5px rgba(110, 128, 135, 0.732);
+}
+
+.start-screen {
+  backdrop-filter: blur(1rem);
+  /* display: none; */
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  min-height: 45vh;
+  box-shadow: 0 10px 25px rgba(110, 128, 135, 0.732);
+  /* width: 40vh; */
+}
+
+.start-screen .category-options {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.start-screen .difficulty-options {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+}
+
+.category-options {
+  display: flex;
+}
+
+.difficulty-options {
+  display: flex;
+}
+
+#start-quiz-btn {
+  margin-top: 2rem;
+}
+#start-quiz-btn,
+#play-again-btn {
+  color: white;
+  font-weight: 500;
+  width: 40%;
+  height: 2rem;
+  border-radius: 1.2rem;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+  background-color: rgb(49, 48, 48);
+}
+
+button:hover {
+  background-color: rgb(49, 48, 48);
+  transform: scale(1.05);
+  box-shadow: 2px 2px 5px rgba(110, 128, 135, 0.732);
+}
+
+.game-screen {
+  display: none;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(213, 206, 206, 0.13);
+  border-radius: 1rem;
+  min-height: 45vh;
+  width: 50%;
+}
+
+.game-screen .game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+}
+
+.game-header .quiz-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game-header .quiz-timer {
+  display: flex;
+  width: 70px;
+  padding: 7px 9px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  align-items: center;
+  gap: 5px;
+
+  background: rgb(49, 48, 48);
+}
+.game-header .quiz-timer span {
+  font-size: 1.5rem;
+}
+
+.quiz-content {
+  padding: 20px 25px 25px;
+}
+
+.quiz-content .answer-options {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.quiz-content .answer-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  background: #f3f1ff;
+  border: 1px solid rgb(49, 48, 48);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.quiz-content .answer-option span {
+  display: block;
+  flex-shrink: 0;
+  margin: -4px -3px -4px 12px;
+}
+
+.quiz-content .answer-option.correct {
+  color: #0d421a;
+  background: #d4edda;
+  border-color: #b7e1c1;
+  box-shadow: 0 5px 5px rgb(48, 103, 48);
+}
+.quiz-content .answer-option.incorrect {
+  color: #560b12;
+  background: #f8d7da;
+  border-color: #f4bec3;
+  box-shadow: 0 5px 5px rgb(102, 41, 41);
+}
+
+.quiz-content .answer-option:hover {
+  background: rgba(184, 175, 175, 0.1);
+}
+
+.quiz-content .question-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.game-screen .quiz-footer {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  justify-content: space-between;
+  border-top: 1px solid #c6c6c6;
+}
+.quiz-footer .question-status .score-display {
+  font-weight: 500;
+}
+
+.quiz-footer .question-status b,
+.end-screen .result-message b {
+  font-weight: 600;
+}
+
+.quiz-footer #next-question-btn {
+  border-radius: 6px;
+  border: none;
+  padding: 13px 25px;
+  height: 3rem;
+  display: inline-flex;
+  gap: 5px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(49, 48, 48);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.score-display {
+  font-weight: 600;
+}
+
+.end-screen {
+  text-align: center;
+  width: 30%;
+  display: none;
+  background-color: white;
+  min-height: 45vh;
+  backdrop-filter: blur(1rem);
+  padding: 2rem;
+  border-radius: 1rem;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(237, 227, 227, 0.13);
+}
+
+.end-screen .result-title {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.end-screen .result-message {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#play-again-btn {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .end-screen {
+    width: 40%;
+  }
+  #play-again-btn {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .start-screen {
+    width: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .category-options {
+    display: block;
+  }
+
+  .start-screen .category-options {
+    margin-top: 0.8rem;
+  }
+
+  .start-screen .difficulty-options {
+    margin-top: 2rem;
+  }
+
+  .category-options select {
+    margin-bottom: 0.8rem;
+  }
+
+  .difficulty-options {
+    display: block;
+  }
+
+  .quiz-title {
+    font-size: 1.5rem;
+  }
+
+  select {
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1.5px;
+    height: 2.2rem;
+    width: 90%;
+  }
+  #start-quiz-btn {
+    margin-top: 40px;
+  }
+
+  .game-screen {
+    width: 90%;
+  }
+
+  .quiz-footer #next-question-btn {
+    padding: 10px 20px;
+    gap: 4px;
+    height: 2rem;
+  }
+
+  .end-screen {
+    width: 70%;
+  }
+
+  #play-again-btn {
+    width: 80%;
+  }
+
+  .end-screen .result-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}
+
+.end-screen {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
