@@ -16,6 +16,7 @@ const clickSound = new Audio("click.mp3");
 
 let questions = [];
 let currentQuestionIndex = 0;
+let questionCount;
 let score = 0;
 let timer;
 let timeLeft = 15;
@@ -32,10 +33,16 @@ const categoryMap = {
   "Science & Nature": 17,
 };
 
+//Function to determine no. of Questions based on Difficulty
+function getQuestionCount(difficulty) {
+  return difficulty === "easy" ? 10 : difficulty === "medium" ? 15 : 20;
+}
+
 // Function to Fetch Questions from API
 async function fetchQuestions(category, difficulty) {
   const categoryId = categoryMap[category] || 9;
-  const url = `https://opentdb.com/api.php?amount=20&category=${categoryId}&difficulty=${difficulty}&type=multiple`;
+  questionCount = getQuestionCount(difficulty);
+  const url = `https://opentdb.com/api.php?amount=${questionCount}&category=${categoryId}&difficulty=${difficulty}&type=multiple`;
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -86,8 +93,7 @@ function showQuestion() {
     ...questionData.incorrect_answers,
     questionData.correct_answer,
   ];
-  console.log(answers);
-
+  
   answers.sort(() => Math.random() - 0.5);
 
   answerOptions.innerHTML = "";
@@ -166,7 +172,7 @@ function showCorrectAnswer() {
 // Next Question
 function nextQuestion() {
   currentQuestionIndex++;
-  if (currentQuestionIndex < 20) {
+  if (currentQuestionIndex < questionCount) {
     showQuestion();
   } else {
     endQuiz();
@@ -175,7 +181,7 @@ function nextQuestion() {
 
 // Update Question Number and Score Display
 function updateStatus() {
-  questionStatus.textContent = `${currentQuestionIndex + 1} of 20`;
+  questionStatus.textContent = `${currentQuestionIndex + 1} of ${questionCount}`;
   scoreDisplay.textContent = score;
 }
 
@@ -183,13 +189,17 @@ function updateStatus() {
 function endQuiz() {
   gameScreen.style.display = "none";
   endScreen.style.display = "block";
-  resultMessage.textContent = `${score} / 20`;
+  resultMessage.textContent = `${score} / ${questionCount}`;
 }
 
 // Restart Quiz
 function restartQuiz() {
+  let defaultCategory = "General Knowledge";
+  let defaultDifficulty = "easy";
   endScreen.style.display = "none";
   startScreen.style.display = "block";
+  categorySelect.value = defaultCategory;
+  difficultySelect.value = defaultDifficulty;
 }
 
 // Event Listeners
