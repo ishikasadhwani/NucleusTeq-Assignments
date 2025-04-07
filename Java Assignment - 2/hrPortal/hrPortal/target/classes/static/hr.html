@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HR Dashboard</title>
+  <link rel="stylesheet" href="hr.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>HR Dashboard</h2>
+      <ul class="menu">
+        <li><a href="#" onclick="loadView('view')">View Employees</a></li>
+        <li><a href="#" onclick="loadView('add')">Add Employee</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content" id="mainContent">
+      <h1>Welcome to the HR Portal!</h1>
+      <p>Select an option from the sidebar to continue.</p>
+    </main>
+  </div>
+
+  <script src="hr.js"></script>
+</body>
+</html>
