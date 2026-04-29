@@ -2,7 +2,7 @@ package com.example.hrPortal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+//this is main
 @SpringBootApplication
 public class HrPortalApplication {
 

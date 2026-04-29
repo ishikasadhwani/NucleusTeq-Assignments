@@ -1,5 +1,5 @@
 package com.example.hrPortal.entity;
-
+//this is employee entity
 import jakarta.persistence.*;
 import lombok.*;
 

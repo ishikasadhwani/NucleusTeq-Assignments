@@ -1,5 +1,5 @@
 package com.example.hrPortal.repository;
-
+//this is hr repo
 import com.example.hrPortal.entity.Hr;
 import org.springframework.data.jpa.repository.JpaRepository;
 
