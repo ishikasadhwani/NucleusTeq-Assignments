@@ -9,6 +9,9 @@ function VisibilityToggle() {
       <button onClick={() => setVisible(!visible)}>
         {visible ? "Hide" : "Show"} Paragraph
       </button>
+      <button onClick={() => setVisible(!visible)}>
+        {visible ? "Hide" : "Show"} Paragraph
+      </button>
       {visible && <p>This paragraph can be toggled on/off.</p>}
     </div>
   );
