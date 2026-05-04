@@ -10,6 +10,7 @@ const player0 = document.querySelector(".player0");
 const player1 = document.querySelector(".player1");
 const player0Name = document.getElementById("player0-name");
 const player1Name = document.getElementById("player1-name");
+const player2Name = document.getElementById("player2-name");
 
 let savedScores, currentScore, activePlayer, playing;
 
