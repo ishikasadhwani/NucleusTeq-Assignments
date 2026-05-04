@@ -41,7 +41,7 @@ start();
 const switchPlayer = function () {
   currentScore = 0;
   document.getElementById(`current${activePlayer}`).textContent = 0;
-  activePlayer = activePlayer === 0 ? 1 : 0;
+  activePlayer = activePlayer === ? 1 : 0;
   player0.classList.toggle("player-active");
   player1.classList.toggle("player-active");
 };
@@ -57,8 +57,8 @@ rollBtn.addEventListener("click", function () {
   if (playing) {
     disableNameEditing();
     //generating random no.
-    const dice = Math.trunc(Math.random() * 6) + 1;
-    diceElement.classList.remove("hidden");
+    const dice = Math.trunc(.random() * 6) + 1;
+    diceElement.classList.("hidden");
     diceElement.classList.add("rolling");
     setTimeout(() => {
       diceElement.src = `dice${dice}.png`;
