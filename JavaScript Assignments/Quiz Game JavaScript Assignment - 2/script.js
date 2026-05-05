@@ -26,7 +26,7 @@ const incorrectIcon = `<span class="material-symbols-rounded">cancel</span>`;
 
 // API Category Mapping
 const categoryMap = {
-  "General Knowledge": 9,
+  "General Knowledge": 9
   "Environment: Books": 10,
   "Environment: Film": 11,
   "Science: Computers": 18,
