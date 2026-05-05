@@ -35,7 +35,7 @@ const categoryMap = {
 
 //Function to determine no. of Questions based on Difficulty
 function getQuestionCount(difficulty) {
-  return difficulty === "easy" ? 10 : difficulty === "medium" ? 15 : 20;
+  return difficulty === "easy" ? 10 : difficulty === "medium" ? 15 : 20
 }
 
 // Function to Fetch Questions from API
