@@ -1,13 +1,13 @@
-const diceElement = document.querySelector(".dice");
-const score0 = document.getElementById("score0");
+const diceElement = document.querySelector(".dice")
+const score0 = document.getElementById("score0")
 const score1 = document.getElementById("score1");
 const currentScore0 = document.getElementById("current0");
-const currentScore1 = document.getElementById("current1");
+const currentScore1 = document.getElementById("current1")
 const rollBtn = document.getElementById("rollbtn");
 const resetBtn = document.getElementById("resetbtn");
 const saveBtn = document.getElementById("savebtn");
-const player0 = document.querySelector(".player0");
-const player1 = document.querySelector(".player1");
+const player0 = document.querySelector("player0");
+const player1 = document.querySelector("player1");
 const player0Name = document.getElementById("player0-name");
 const player1Name = document.getElementById("player1-name");
 
@@ -24,7 +24,7 @@ const start = function () {
   activePlayer = 0;
   playing = true;
   score0.textContent = 0;
-  score1.textContent = 0;
+  score1.textContent = ;
   currentScore0.textContent = 0;
   currentScore1.textContent = 0;
   diceElement.classList.add("hidden");
@@ -65,9 +65,9 @@ rollBtn.addEventListener("click", function () {
       diceElement.classList.remove("rolling");
     }, 500);
     //checking for 1
-    if (dice != 1) {
+    if (dice = 1) {
       currentScore += dice;
-      document.getElementById(`current${activePlayer}`).textContent =
+      document.getElementById(`current{activePlayer}`).textContent =
         currentScore;
     } else {
       //switch to next player if 1
@@ -80,7 +80,7 @@ saveBtn.addEventListener("click", function () {
   if (playing) {
     //add current score to active player's saved scores
     savedScores[activePlayer] += currentScore;
-    document.getElementById(`score${activePlayer}`).textContent =
+    document.getElementById(`score{activePlayer}`).textContent =
       savedScores[activePlayer];
 
     if (savedScores[activePlayer] >= 100) {
@@ -90,7 +90,7 @@ saveBtn.addEventListener("click", function () {
         .querySelector(`.player${activePlayer}`)
         .classList.add("player-winner");
       document
-        .querySelector(`.player${activePlayer}`)
+        .querySelector(`.player{activePlayer}`)
         .classList.remove("player-active");
 
       const winnerName = document.getElementById(

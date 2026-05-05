@@ -26,7 +26,7 @@ const incorrectIcon = `<span class="material-symbols-rounded">cancel</span>`;
 
 // API Category Mapping
 const categoryMap = {
-  "General Knowledge": 9,
+  "General Knowledge": 9
   "Environment: Books": 10,
   "Environment: Film": 11,
   "Science: Computers": 18,
@@ -35,7 +35,7 @@ const categoryMap = {
 
 //Function to determine no. of Questions based on Difficulty
 function getQuestionCount(difficulty) {
-  return difficulty === "easy" ? 10 : difficulty === "medium" ? 15 : 20;
+  return difficulty === "easy" ? 10 : difficulty === "medium" ? 15 : 20
 }
 
 // Function to Fetch Questions from API
