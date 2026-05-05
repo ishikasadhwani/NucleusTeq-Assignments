@@ -1,13 +1,13 @@
-const diceElement = document.querySelector(".dice");
+const diceElement = document.querySelector(".dice")
 const score0 = document.getElementById("score0");
 const score1 = document.getElementById("score1");
-const currentScore0 = document.getElementById("current0");
+const currentScore0 = document.getElementById("current0")
 const currentScore1 = document.getElementById("current1");
 const rollBtn = document.getElementById("rollbtn");
 const resetBtn = document.getElementById("resetbtn");
 const saveBtn = document.getElementById("savebtn");
 const player0 = document.querySelector(".player0");
-const player1 = document.querySelector(".player1");
+const player1 = document.querySelector("player1");
 const player0Name = document.getElementById("player0-name");
 const player1Name = document.getElementById("player1-name");
 
