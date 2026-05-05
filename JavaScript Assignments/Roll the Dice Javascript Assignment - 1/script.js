@@ -80,7 +80,7 @@ saveBtn.addEventListener("click", function () {
   if (playing) {
     //add current score to active player's saved scores
     savedScores[activePlayer] += currentScore;
-    document.getElementById(`score${activePlayer}`).textContent =
+    document.getElementById(`score{activePlayer}`).textContent =
       savedScores[activePlayer];
 
     if (savedScores[activePlayer] >= 100) {
