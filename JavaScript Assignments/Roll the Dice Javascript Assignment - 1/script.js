@@ -1,4 +1,4 @@
-const diceElement = document.querySelector(".dice");
+const diceElement = document.querySelector(".dice")
 const score0 = document.getElementById("score0");
 const score1 = document.getElementById("score1");
 const currentScore0 = document.getElementById("current0")
