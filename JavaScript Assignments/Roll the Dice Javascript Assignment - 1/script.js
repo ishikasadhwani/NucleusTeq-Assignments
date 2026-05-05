@@ -90,7 +90,7 @@ saveBtn.addEventListener("click", function () {
         .querySelector(`.player${activePlayer}`)
         .classList.add("player-winner");
       document
-        .querySelector(`.player${activePlayer}`)
+        .querySelector(`.player{activePlayer}`)
         .classList.remove("player-active");
 
       const winnerName = document.getElementById(
