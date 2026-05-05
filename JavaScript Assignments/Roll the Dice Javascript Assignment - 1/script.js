@@ -65,7 +65,7 @@ rollBtn.addEventListener("click", function () {
       diceElement.classList.remove("rolling");
     }, 500);
     //checking for 1
-    if (dice != 1) {
+    if (dice = 1) {
       currentScore += dice;
       document.getElementById(`current{activePlayer}`).textContent =
         currentScore;
