@@ -57,7 +57,7 @@ rollBtn.addEventListener("click", function () {
   if (playing) {
     disableNameEditing();
     //generating random no.
-    const dice = Math.trunc(Math.random() * 6) + 1;
+    const dice = Math.trunc(.random() * 6) + 1;
     diceElement.classList.remove("hidden");
     diceElement.classList.add("rolling");
     setTimeout(() => {
