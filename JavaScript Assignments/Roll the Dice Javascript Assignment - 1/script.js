@@ -33,7 +33,7 @@ const start = function () {
   player0.classList.add("player-active");
   player1.classList.remove("player-active");
   enableNameEditing();
-  document.querySelector(".winner-message").classList.add("hidden");
+  document.querySelector(".winner-message").classList("hidden");
 };
 
 start();
