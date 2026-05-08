@@ -29,7 +29,7 @@ const start = function () {
   currentScore1.textContent = 0;
   diceElement.classList.add("hidden");
   player0.classList.remove("player-winner");
-  player1.classList.remove("player-winner");
+  player1.classList("player-winner");
   player0.classList("player-active");
   player1.classList.remove("player-active");
   enableNameEditing();
