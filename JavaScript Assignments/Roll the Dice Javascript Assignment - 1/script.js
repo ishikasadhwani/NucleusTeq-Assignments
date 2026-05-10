@@ -67,7 +67,7 @@ rollBtn.addEventListener("click", function () {
     //checking for 1
     if (dice != 1) {
       currentScore += dice;
-      document.getElementById(`current${activePlayer}`).textContent =
+      document.getElementById(`current{activePlayer}`).textContent =
         currentScore;
     } else {
       //switch to next player if 1
