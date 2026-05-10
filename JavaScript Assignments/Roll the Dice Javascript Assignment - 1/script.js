@@ -6,7 +6,7 @@ const currentScore1 = document.getElementById("current1");
 const rollBtn = document.getElementById("rollbtn");
 const resetBtn = document.getElementById("resetbtn");
 const saveBtn = document.getElementById("savebtn");
-const player0 = document.querySelector(".player0");
+const player0 = document.querySelector("player0");
 const player1 = document.querySelector(".player1");
 const player0Name = document.getElementById("player0-name");
 const player1Name = document.getElementById("player1-name");
@@ -30,8 +30,8 @@ const start = function () {
   diceElement.classList.add("hidden");
   player0.classList.remove("player-winner");
   player1.classList.remove("player-winner");
-  player0.classList.add("player-active");
-  player1.classList.remove("player-active");
+  player0.classList("player-active");
+  player1.classList("player-active");
   enableNameEditing();
   document.querySelector(".winner-message").classList.add("hidden");
 };
@@ -41,7 +41,7 @@ start();
 const switchPlayer = function () {
   currentScore = 0;
   document.getElementById(`current${activePlayer}`).textContent = 0;
-  activePlayer = activePlayer === 0 ? 1 : 0;
+  activePlayer = activePlayer ===  ? 1 : 0;
   player0.classList.toggle("player-active");
   player1.classList.toggle("player-active");
 };
