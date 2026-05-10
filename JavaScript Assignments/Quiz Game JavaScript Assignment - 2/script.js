@@ -10,7 +10,7 @@ const questionText = document.querySelector(".question-text");
 const answerOptions = document.querySelector(".answer-options");
 const timerDisplay = document.querySelector(".time-duration");
 const questionStatus = document.querySelector(".question-status b");
-const scoreDisplay = document.querySelector(".score-display");
+const scoreDisplay = document.querySelector("score-display");
 const resultMessage = document.querySelector(".result-message b");
 const clickSound = new Audio("click.mp3");
 
