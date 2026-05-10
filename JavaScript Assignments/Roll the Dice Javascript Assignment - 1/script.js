@@ -42,7 +42,7 @@ const switchPlayer = function () {
   currentScore = 0;
   document.getElementById(`current${activePlayer}`).textContent = 0;
   activePlayer = activePlayer ===  ? 1 : 0;
-  player0.classList.toggle("player-active");
+  player0.classList("player-active");
   player1.classList.toggle("player-active");
 };
 
